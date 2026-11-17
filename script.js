@@ -1,6 +1,5 @@
 const toDoInput = document.getElementById("todo-input");
 const listContatiner = document.getElementById("list-container");
-const toDoBtn = document.getElementById("to-do-btn");
 const toDoForm = document.querySelector("#todo-form");
 
 const maxLimit = 5;
@@ -20,9 +19,14 @@ toDoForm.addEventListener("submit", (e) => {
 
     } else {
         let li = document.createElement("li");
-        li.textContent = text; //kan också skriva: li.innerHTML = toDoInput.value men då tolkas texten som HTML-kod.
-        listContatiner.append(li);
-        
+
+        const span = document.createElement("span");
+        li.append(span);
+        span.textContent = text;
+        span.addEventListener ("click", () => {
+            span.classList.toggle("done");
+        });
+            
         const del = document.createElement("button");
         del.textContent = "x";
 
@@ -33,8 +37,11 @@ toDoForm.addEventListener("submit", (e) => {
         });
 
         li.append(del);
+        listContatiner.append(li);
     }
-    toDoInput.value= "";
+
+    toDoInput.value= ""; //tömmer input fältet efter att ett items lagt till.
+
 });
 
 const deleteBtn = document.getElementById("clear-btn");
