@@ -5,19 +5,25 @@
 body {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
     gap: 2rem;
-    background-color: #f1f1e7b0;
+    background-color: #14161B;
+    min-height: 100vh;
+    padding: 1rem;
 }
 
 .container {
-    flex: 1;
-    padding: 1rem 5rem;
+    min-height: 350px;
+    width: min(90%, 650px);
+    align-self: center;
     background-image: linear-gradient(to left top, #163d66c4, #89add3ab);
+    border: solid #89ADD3;
     border-radius: 10px;
-    box-shadow: 10px 10px 5px #89add39c;
-    
+    box-shadow: 20px 20px 6px #89add39c;  
+}
 
+h1 {
+    padding: 10px;
 }
 
 #todo-form {
@@ -26,12 +32,11 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    border: solid 1px red;
 }
 
 #todo-input {
-    padding: 0.5rem 10rem;
-    flex: 1;
+    padding: 0.5rem;
+    width: 90%;
     border: solid 1px #163d66c4;
     font-size: 1rem;
     border-radius: 5px;
@@ -44,18 +49,15 @@ body {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     font-weight: bold;
-}
-
-#list-container {
-    border: solid 1px blue;
+    border: solid rgba(116, 75, 1, 0.76);
 }
 
 li {
-    border: solid 1px orange;
     display: flex;
     justify-content: space-between;
     font-size: 1.2rem;
     text-align: center;
+    margin: 10px;
 }
 
 ul{
@@ -65,16 +67,20 @@ ul{
 
 .del-btn {
     background-color: rgba(255, 0, 0, 0.877);
-    border-radius: 1px;
+    border-radius: 5px;
     margin: 0px 5px;
     padding: 0.2rem 0.7rem;
     font-size: 1rem;
+    border: solid rgba(192, 4, 4, 0.877);
 
 }
 
 #clear-btn {
     background-color: rgba(75, 75, 75, 0.623);
     padding: 0.5rem 1rem;
+    margin-left: 10px;
+    margin-bottom: 10px;
     border-radius: 0.5rem;
     font-weight: bold;
+    border: solid rgba(39, 39, 39, 0.623);
 }
