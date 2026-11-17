@@ -26,6 +26,8 @@ toDoForm.addEventListener("submit", (e) => {
         const del = document.createElement("button");
         del.textContent = "x";
 
+        del.classList.add("del-btn");
+
         del.addEventListener("click", (e) => {
             e.target.parentElement.remove(); //e.target är knappen som klickas på och parentElement är knappens föräldrar - dess li. 
         });
