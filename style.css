@@ -50,6 +50,11 @@ h1 {
     border-radius: 0.5rem;
     font-weight: bold;
     border: solid rgba(116, 75, 1, 0.76);
+    cursor: pointer;
+}
+
+#to-do-btn:hover {
+    background-color: rgb(255, 204, 109);
 }
 
 li {
@@ -72,7 +77,11 @@ ul{
     padding: 0.2rem 0.7rem;
     font-size: 1rem;
     border: solid rgba(192, 4, 4, 0.877);
+    cursor: pointer;
+}
 
+.del-btn:hover {
+    background-color: rgb(255, 73, 73);
 }
 
 #clear-btn {
@@ -83,4 +92,15 @@ ul{
     border-radius: 0.5rem;
     font-weight: bold;
     border: solid rgba(39, 39, 39, 0.623);
+    cursor: pointer;
+}
+
+#clear-btn:hover {
+    background-color: rgb(128, 128, 128);
+}
+
+.done {
+    text-decoration: line-through;
+    color: rgb(39, 39, 39);
+    cursor: pointer;
 }
